@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1><a href="./index.html">Sudoku Solver</a> </h1>
+      <a href="./assets2/SudokuGame.html">Sudoku Game</a>
+    </nav>
+    <hr />
+
+    <main>
+
+        <div class="container">
+          <div id="sudoku-board"></div>
+    
+          <div id="butt">
+            <div id="number-pad" class="pad">
+              <!-- Separate 3x3 grid for entering numbers -->
+              <button onclick="setNumber(1)">1</button>
+              <button onclick="setNumber(2)">2</button>
+              <button onclick="setNumber(3)">3</button>
+              <button onclick="setNumber(4)">4</button>
+              <button onclick="setNumber(5)">5</button>
+              <button onclick="setNumber(6)">6</button>
+              <button onclick="setNumber(7)">7</button>
+              <button onclick="setNumber(8)">8</button>
+              <button onclick="setNumber(9)">9</button>
+            </div>
+    
+            <div class="buttons">
+              <button onclick="solveSudoku()">Solve</button>
+              <button onclick="clearCell()">Clear</button>
+              <button onclick="clearBoard()">ClearAll</button>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+
+        <section class="about-sudoku col-12">
+            <h2 class="sudoku-title bold">Introduction to Sudoku</h2>
+            <div class="row">
+                <p class="sudoku-desc col-12">
+                    This fun, easy-to-understand puzzle game has captured the fascination of humans for nearly 3,000 years.                                 </p>
+                <p class="sudoku-desc col-12">
+                    The object of the game is to fill in the Sudoku grid with a series of one-digit numbers, each of which appears only once in a given row, column, or 3x3 block. At the start, certain numbers are provided in the Sudoku grid, which serve as clues to help the player gradually solve the entire puzzle.                                </p>
+                <p class="sudoku-desc col-12">
+                    Anyone can play Sudoku. There are no calculations involved; it is entirely a game of logic, so you don't have to be a mathematician to solve Sudoku grids. This explains why Sudoku has become a true global phenomenon. Millions of people play Sudoku every day!                                </p>
+                <p class="sudoku-desc col-12">
+                    By definition, a valid Sudoku grid must have one (and only one) solution. We guarantee that all of our Sudoku grids have a unique solution.  Although it is easier to design grids with multiple solutions (or no solution at all), these cannot be considered true Sudoku puzzles.  As in the case in many logic games, there can only be one answer.  Designing a grid therefore requires careful attention, because even one misplaced number would make the puzzle impossible to solve.                                </p>
+                <p class="sudoku-desc col-12">
+                    There is also an unwritten rule that the beauty of a Sudoku grid lies in the symmetrical distribution, on either side of the grid's two diagonals, of the numbers provided at the start. This visual harmony is highly sought after among the most avid Sudoku players. Even though it is infinitely more complicated to create symmetrical grids, especially those guaranteed to have a unique solution, we only design Sudoku grids that feature this type of symmetry. Some of our grids took weeks of computing to develop and we are therefore proud to be able to offer you these symmetrical, single-solution puzzles. After all, Sudoku isn't just a game; it's a philosophy and a lifestyle where beauty and harmony are the top priority!                                 </p>
+                <p class="sudoku-desc col-12">
+                    The numerals in Sudoku puzzles are used solely for convenience; arithmetic relationships between them are irrelevant.  Any set of distinct symbols will do; letters, shapes or colors may be used without altering the rules of the game.                                 </p>
+                <p class="sudoku-desc col-12">
+                    The attraction of the game is that the rules are simple, yet the line of reasoning to solve the puzzle is complex. The grids we publish are ranked in terms of their difficulty from 1 (easiest) to 5 (most difficult). In general, the more numbers that are provided at the outset, the easier the puzzle will be to solve, and vice versa, though there are some exceptions.                                </p>
+                <p class="sudoku-desc col-12">
+                    In recent years, Sudoku's incredible rise in popularity and rapid introduction in international newspapers have made it the favorite puzzle game of the 21st century. Moreover, many governments encourage people to play Sudoku because the game is considered to have a significant role in preventing age-related diseases (especially Alzheimer's).                                 </p>
+            </div>
+            
+        </section>
+
+    </footer>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
