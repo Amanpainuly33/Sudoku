@@ -136,8 +136,27 @@ function solve(board) {
     }
     return true;
 }
-
+function isBoardValid() {
+    const board = getBoardValues();
+    for (let row = 0; row < 9; row++) {
+        for (let col = 0; col < 9; col++) {
+            const num = board[row][col];
+            if (num !== 0) {
+                board[row][col] = 0; // Temporarily clear the cell
+                if (!isValid(board, row, col, num)) {
+                    return false; // Invalid configuration
+                }
+                board[row][col] = num; // Restore the number
+            }
+        }
+    }
+    return true; // All cells are valid
+}
 function solveSudoku() {
+    if (!isBoardValid()) {
+        alert("Invalid board configuration! Please fix errors before solving.");
+        return;
+    }
     const board = getBoardValues();
     if (solve(board)) {
         setBoardValues(board);
